@@ -1,0 +1,86 @@
+<AllProducts xmlns="">
+  <Table>
+    <ProductID>10</ProductID>
+    <ProductName>Ikura</ProductName>
+    <UnitPrice>31.0000</UnitPrice>
+    <CategoryName>Seafood</CategoryName>
+    <UnitsInStock>31</UnitsInStock>
+  </Table>
+  <Table>
+    <ProductID>13</ProductID>
+    <ProductName>Konbu</ProductName>
+    <UnitPrice>6.0000</UnitPrice>
+    <CategoryName>Seafood</CategoryName>
+    <UnitsInStock>24</UnitsInStock>
+  </Table>
+  <Table>
+    <ProductID>18</ProductID>
+    <ProductName>Carnarvon Tigers</ProductName>
+    <UnitPrice>62.5000</UnitPrice>
+    <CategoryName>Seafood</CategoryName>
+    <UnitsInStock>42</UnitsInStock>
+  </Table>
+  <Table>
+    <ProductID>30</ProductID>
+    <ProductName>Nord-Ost Matjeshering</ProductName>
+    <UnitPrice>25.8900</UnitPrice>
+    <CategoryName>Seafood</CategoryName>
+    <UnitsInStock>10</UnitsInStock>
+  </Table>
+  <Table>
+    <ProductID>36</ProductID>
+    <ProductName>Inlagd Sill</ProductName>
+    <UnitPrice>19.0000</UnitPrice>
+    <CategoryName>Seafood</CategoryName>
+    <UnitsInStock>112</UnitsInStock>
+  </Table>
+  <Table>
+    <ProductID>37</ProductID>
+    <ProductName>Gravad lax</ProductName>
+    <UnitPrice>26.0000</UnitPrice>
+    <CategoryName>Seafood</CategoryName>
+    <UnitsInStock>11</UnitsInStock>
+  </Table>
+  <Table>
+    <ProductID>40</ProductID>
+    <ProductName>Boston Crab Meat</ProductName>
+    <UnitPrice>18.4000</UnitPrice>
+    <CategoryName>Seafood</CategoryName>
+    <UnitsInStock>123</UnitsInStock>
+  </Table>
+  <Table>
+    <ProductID>41</ProductID>
+    <ProductName>Jack's New England Clam Chowder</ProductName>
+    <UnitPrice>9.6500</UnitPrice>
+    <CategoryName>Seafood</CategoryName>
+    <UnitsInStock>85</UnitsInStock>
+  </Table>
+  <Table>
+    <ProductID>45</ProductID>
+    <ProductName>Rogede sild</ProductName>
+    <UnitPrice>9.5000</UnitPrice>
+    <CategoryName>Seafood</CategoryName>
+    <UnitsInStock>5</UnitsInStock>
+  </Table>
+  <Table>
+    <ProductID>46</ProductID>
+    <ProductName>Spegesild</ProductName>
+    <UnitPrice>12.0000</UnitPrice>
+    <CategoryName>Seafood</CategoryName>
+    <UnitsInStock>95</UnitsInStock>
+  </Table>
+  <Table>
+    <ProductID>58</ProductID>
+    <ProductName>Escargots de Bourgogne</ProductName>
+    <UnitPrice>13.2500</UnitPrice>
+    <CategoryName>Seafood</CategoryName>
+    <UnitsInStock>62</UnitsInStock>
+  </Table>
+  <Table>
+    <ProductID>73</ProductID>
+    <ProductName>Röd Kaviar</ProductName>
+    <UnitPrice>15.0000</UnitPrice>
+    <CategoryName>Seafood</CategoryName>
+    <UnitsInStock>101</UnitsInStock>
+  </Table>
+</AllProducts>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://dupreez.us/webservices/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://dupreez.us/webservices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://dupreez.us/webservices/">
+      <s:element name="ListAllCategories">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListAllCategoriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListAllCategoriesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListAllProducts">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListAllProductsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListAllProductsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchProductByName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ContainsString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchProductByNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchProductByNameResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchProductByCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CategoryName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchProductByCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchProductByCategoryResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ListAllCategoriesSoapIn">
+    <wsdl:part name="parameters" element="tns:ListAllCategories" />
+  </wsdl:message>
+  <wsdl:message name="ListAllCategoriesSoapOut">
+    <wsdl:part name="parameters" element="tns:ListAllCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListAllProductsSoapIn">
+    <wsdl:part name="parameters" element="tns:ListAllProducts" />
+  </wsdl:message>
+  <wsdl:message name="ListAllProductsSoapOut">
+    <wsdl:part name="parameters" element="tns:ListAllProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchProductByNameSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchProductByName" />
+  </wsdl:message>
+  <wsdl:message name="SearchProductByNameSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchProductByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchProductByCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:SearchProductByCategory" />
+  </wsdl:message>
+  <wsdl:message name="SearchProductByCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:SearchProductByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SupplierCompanySoap">
+    <wsdl:operation name="ListAllCategories">
+      <wsdl:input message="tns:ListAllCategoriesSoapIn" />
+      <wsdl:output message="tns:ListAllCategoriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListAllProducts">
+      <wsdl:input message="tns:ListAllProductsSoapIn" />
+      <wsdl:output message="tns:ListAllProductsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductByName">
+      <wsdl:input message="tns:SearchProductByNameSoapIn" />
+      <wsdl:output message="tns:SearchProductByNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductByCategory">
+      <wsdl:input message="tns:SearchProductByCategorySoapIn" />
+      <wsdl:output message="tns:SearchProductByCategorySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SupplierCompanySoap" type="tns:SupplierCompanySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListAllCategories">
+      <soap:operation soapAction="http://dupreez.us/webservices/ListAllCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAllProducts">
+      <soap:operation soapAction="http://dupreez.us/webservices/ListAllProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductByName">
+      <soap:operation soapAction="http://dupreez.us/webservices/SearchProductByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductByCategory">
+      <soap:operation soapAction="http://dupreez.us/webservices/SearchProductByCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SupplierCompanySoap12" type="tns:SupplierCompanySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListAllCategories">
+      <soap12:operation soapAction="http://dupreez.us/webservices/ListAllCategories" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAllProducts">
+      <soap12:operation soapAction="http://dupreez.us/webservices/ListAllProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductByName">
+      <soap12:operation soapAction="http://dupreez.us/webservices/SearchProductByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductByCategory">
+      <soap12:operation soapAction="http://dupreez.us/webservices/SearchProductByCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SupplierCompany">
+    <wsdl:port name="SupplierCompanySoap" binding="tns:SupplierCompanySoap">
+      <soap:address location="http://ws.k2.com/tester/SupplierCompany.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SupplierCompanySoap12" binding="tns:SupplierCompanySoap12">
+      <soap12:address location="http://ws.k2.com/tester/SupplierCompany.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
